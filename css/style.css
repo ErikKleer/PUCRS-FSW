@@ -1,0 +1,217 @@
+/* style.css - Estilos gerais */
+
+/* Variáveis de cores */
+:root {
+    --cor-primaria: #2E7D32;
+    --cor-secundaria: #66BB6A;
+    --cor-terciaria: #1B5E20;
+    --cor-destaque: #FFC107;
+    --cor-texto-escuro: #333;
+    --cor-texto-claro: #000000;
+    --cor-fundo-claro: #f8f9fa;
+    --cor-fundo-escuro: #333;
+    --transicao-padrao: all 0.3s ease;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: var(--transicao-padrao);
+    scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+#cabecalho {
+    background: linear-gradient(135deg, var(--cor-primaria), var(--cor-terciaria)) !important;
+}
+
+/* Animações e efeitos */
+.produto-card {
+    transition: var(--transicao-padrao);
+    overflow: hidden;
+}
+
+.produto-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+.produto-card img {
+    transition: var(--transicao-padrao);
+}
+
+.produto-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilo para o carrossel */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+/* Estilo para as seções */
+section {
+    padding: 20px 0;
+    border-radius: 8px;
+}
+
+section h2 {
+    color: var(--cor-primaria);
+    position: relative;
+    margin-bottom: 30px;
+}
+
+/* Estilo para o calendário */
+#calendario-agendamento table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendario-agendamento th,
+#calendario-agendamento td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#calendario-agendamento th {
+    background-color: var(--cor-primaria);
+    color: white;
+}
+
+#calendario-agendamento td.disponivel {
+    background-color: #d4edda;
+    cursor: pointer;
+}
+
+#calendario-agendamento td.indisponivel {
+    background-color: #f8d7da;
+    text-decoration: line-through;
+    color: #999;
+}
+
+#calendario-agendamento td.selecionado {
+    background-color: var(--cor-destaque);
+    font-weight: bold;
+}
+
+/* Estilo para formulários */
+.form-label {
+    font-weight: 500;
+}
+
+.btn-primary {
+    background-color: var(--cor-primaria);
+    border-color: var(--cor-primaria);
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-terciaria);
+    border-color: var(--cor-terciaria);
+}
+
+/* Rodapé */
+#rodape {
+    background: linear-gradient(135deg, #333, #1a1a1a) !important;
+}
+
+#rodape a {
+    transition: var(--transicao-padrao);
+    text-decoration: none;
+}
+
+#rodape a:hover {
+    color: var(--cor-destaque) !important;
+    text-decoration: none;
+}
+
+/* Estilos para acessibilidade */
+.alto-contraste {
+    background-color: var(--cor-fundo-escuro) !important;
+    color: var(--cor-texto-claro) !important;
+}
+
+.alto-contraste .card,
+.alto-contraste .bg-light {
+    background-color: #222 !important;
+    color: white !important;
+}
+
+.alto-contraste .card-title,
+.alto-contraste h2,
+.alto-contraste h3,
+.alto-contraste p {
+    color: white !important;
+}
+
+.alto-contraste .btn {
+    border: 2px solid white;
+}
+
+.fonte-pequena {
+    font-size: 0.9em;
+}
+
+.fonte-normal {
+    font-size: 1em;
+}
+
+.fonte-grande {
+    font-size: 1.2em;
+}
+
+.fonte-muito-grande {
+    font-size: 1.4em;
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+    }
+
+    #rodape h3 {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-caption {
+        padding: 8px;
+    }
+
+    .carousel-caption h2 {
+        font-size: 1.2rem;
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem;
+    }
+}

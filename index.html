@@ -4,124 +4,436 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MiniMerch</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- CSS personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <header id="cabecalho">
-        <h1>MiniMerch</h1>
-        <p>MiniMerch, Preços Minúsculos</p>
-        <nav id="menu-principal">
-            <ul>
-                <li><a href="#verde">Frutas e Verduras</a></li>
-                <li><a href="#marrom">Não Perecíveis</a></li>
-                <li><a href="#branco">Higiene e Limpeza</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-            </ul>
-        </nav>
+    <header id="cabecalho" class="bg-success text-white py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h1>MiniMerch</h1>
+                    <p class="lead">MiniMerch, Preços Minúsculos</p>
+                </div>
+                <div class="col-md-6">
+                    <nav id="menu-principal">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item"><a class="nav-link text-white" href="#carousel-section">Início</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#verde">Frutas e Verduras</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#marrom">Não Perecíveis</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#branco">Higiene e Limpeza</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#servicos">Serviços</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#cadastro">Cadastro</a></li>
+                            <li class="nav-item"><a class="nav-link text-white" href="#agendamento">Agendamento</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
     </header>
-    <main>
-        <section id="verde">
-            <h2>Frutas e Verduras</h2>
-            <div class="produtos-container">
-                <article class="produto">
-                    <h3>Maçã Fuji</h3>
-                    <img src="img\MacaFuji.jpeg" alt="Maçã Fuji" width="150" height="150">
-                    <p class="descricao">Maçãs Fuji frescas e selecionadas. Vendidas por kg.</p>
-                    <p class="preco">R$ 10,49/kg</p>
-                </article>
-                <article class="produto">
-                    <h3>Alface Crespa</h3>
-                    <img src="img\AlfaceCrespa.jpeg" alt="Alface Crespa" width="150" height="150">
-                    <p class="descricao">Alface crespa orgânica cultivada localmente. Unidade.</p>
-                    <p class="preco">R$ 3,99/unidade</p>
-                </article>
+    <main class="container mt-4">
+        <!-- Seção de Carrossel -->
+        <section id="carousel-section" class="mb-5">
+            <div id="carouselPromoções" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselPromoções" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselPromoções" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselPromoções" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner rounded shadow">
+                    <div class="carousel-item active">
+                        <img src="img/promocao1.jpg" class="d-block w-100" alt="Promoção de frutas e verduras frescas">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Promoção da Semana</h2>
+                            <p>Frutas e verduras com até 30% de desconto!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/promocao2.jpg" class="d-block w-100" alt="Promoção de produtos de limpeza">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Limpeza e Higiene</h2>
+                            <p>Produtos para sua casa com preços incríveis!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/promocao3.jpg" class="d-block w-100" alt="Promoção de itens não perecíveis">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h2>Itens da Cesta Básica</h2>
+                            <p>Arroz, feijão e outros essenciais com preços baixos!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselPromoções" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselPromoções" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                </button>
             </div>
         </section>
-        <section id="marrom">
-            <h2>Produtos Alimentícios Não Perecíveis</h2>
-            <div class="produtos-container">
-                <article class="produto">
-                    <h3>Arroz Integral</h3>
-                    <img src="img\ArrozIntegral.jpeg" alt="Arroz Integral" width="150" height="150">
-                    <p class="descricao">Arroz integral, pacote de 1kg.</p>
-                    <p class="preco">R$ 8,99/pacote</p>
-                </article>
-                <article class="produto">
-                    <h3>Feijão Carioca</h3>
-                    <img src="img\FeijaoCarioca.jpg" alt="Feijão Carioca" width="150" height="150">
-                    <p class="descricao">Feijão carioca, pacote de 1kg.</p>
-                    <p class="preco">R$ 7,99/pacote</p>
-                </article>
+        <!-- Seção Frutas e Verduras -->
+        <section id="verde" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Frutas e Verduras</h2>
+            <div class="row produtos-container">
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Maçã Fuji</h3>
+                            <img src="img/MacaFuji.jpeg" alt="Maçã Fuji, vermelha e brilhante, fruta fresca e suculenta" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Maçãs Fuji frescas e selecionadas. Vendidas por kg.</p>
+                            <p class="card-text preco fw-bold">R$ 10,49/kg</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Maçã Fuji" data-preco="10.49">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Alface Crespa</h3>
+                            <img src="img/AlfaceCrespa.jpeg" alt="Alface crespa verde e fresca, folhas crocantes e saudáveis" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Alface crespa orgânica cultivada localmente. Unidade.</p>
+                            <p class="card-text preco fw-bold">R$ 3,99/unidade</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Alface Crespa" data-preco="3.99">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-        <section id="branco">
-            <h2>Produtos de Higiene e Limpeza</h2>
-            <div class="produtos-container">
-                <article class="produto">
-                    <h3>Sabonete Líquido</h3>
-                    <img src="img\SaboneteLiquido.jpg" alt="Sabonete Líquido" width="150" height="150">
-                    <p class="descricao">Sabonete líquido hidratante, frasco com 250ml.</p>
-                    <p class="preco">R$ 10,49/unidade</p>
-                </article>
-                <article class="produto">
-                    <h3>Detergente Multiuso</h3>
-                    <img src="img\DetergenteMultiuso.jpg" alt="Detergente Multiuso" width="150" height="150">
-                    <p class="descricao">Detergente multiuso para limpeza geral, 500ml.</p>
-                    <p class="preco">R$ 2,99/unidade</p>
-                </article>
+        <!-- Seção Produtos Não Perecíveis -->
+        <section id="marrom" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Produtos Alimentícios Não Perecíveis</h2>
+            <div class="row produtos-container">
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Arroz Integral</h3>
+                            <img src="img/ArrozIntegral.jpeg" alt="Pacote de arroz integral de 1kg, grãos naturais sem processamento" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Arroz integral, pacote de 1kg.</p>
+                            <p class="card-text preco fw-bold">R$ 8,99/pacote</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Arroz Integral" data-preco="8.99">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Feijão Carioca</h3>
+                            <img src="img/FeijaoCarioca.jpg" alt="Pacote de feijão carioca de 1kg, grãos marrons claros e uniformes" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Feijão carioca, pacote de 1kg.</p>
+                            <p class="card-text preco fw-bold">R$ 7,99/pacote</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Feijão Carioca" data-preco="7.99">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <div class="servicos-container">
-                <article class="servico">
-                    <h3>Retirada no Local</h3>
-                    <p class="descricao">Faça seu pedido online e retire na loja sem custo adicional. Tempo médio de separação: 30 minutos.</p>
-                    <p class="preco">Grátis</p>
-                </article>
-                <article class="servico">
-                    <h3>Tele-entrega</h3>
-                    <p class="descricao">Receba suas compras em casa com nossa entrega rápida. Prazo de entrega: até 2 horas após a confirmação do pedido.</p>
-                    <p class="preco">R$ 7,00 (Grátis para compras acima de R$ 100,00)</p>
-                </article>
+        <!-- Seção Produtos de Higiene e Limpeza -->
+        <section id="branco" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Produtos de Higiene e Limpeza</h2>
+            <div class="row produtos-container">
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Sabonete Líquido</h3>
+                            <img src="img/SaboneteLiquido.jpg" alt="Frasco de sabonete líquido de 250ml, embalagem transparente com produto rosa" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Sabonete líquido hidratante, frasco com 250ml.</p>
+                            <p class="card-text preco fw-bold">R$ 10,49/unidade</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Sabonete Líquido" data-preco="10.49">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <article class="produto card h-100 shadow-sm produto-card">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Detergente Multiuso</h3>
+                            <img src="img/DetergenteMultiuso.jpg" alt="Frasco de detergente multiuso de 500ml, embalagem azul com bico spray" class="img-fluid rounded mb-3" width="150" height="150">
+                            <p class="card-text descricao">Detergente multiuso para limpeza geral, 500ml.</p>
+                            <p class="card-text preco fw-bold">R$ 2,99/unidade</p>
+                            <button class="btn btn-success adicionar-carrinho" data-produto="Detergente Multiuso" data-preco="2.99">
+                                <i class="fas fa-cart-plus"></i> Adicionar
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Seção Serviços -->
+        <section id="servicos" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Serviços</h2>
+            <div class="row servicos-container">
+                <div class="col-md-6 mb-4">
+                    <article class="servico card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title"><i class="fas fa-store"></i> Retirada no Local</h3>
+                            <p class="card-text descricao">Faça seu pedido online e retire na loja sem custo adicional. Tempo médio de separação: 30 minutos.</p>
+                            <p class="card-text preco fw-bold text-success">Grátis</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <article class="servico card h-100 shadow-sm">
+                        <div class="card-body text-center">
+                            <h3 class="card-title"><i class="fas fa-truck"></i> Tele-entrega</h3>
+                            <p class="card-text descricao">Receba suas compras em casa com nossa entrega rápida. Prazo de entrega: até 2 horas após a confirmação do pedido.</p>
+                            <p class="card-text preco fw-bold">R$ 7,00 (Grátis para compras acima de R$ 100,00)</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <!-- Nova Seção: Cadastro de Cliente -->
+        <section id="cadastro" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Cadastro de Cliente</h2>
+            <div class="card shadow">
+                <div class="card-body">
+                    <form id="form-cadastro" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6 mb-3">
+                                <label for="nome" class="form-label">Nome Completo*</label>
+                                <input type="text" class="form-control" id="nome" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe seu nome completo.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="cpf" class="form-label">CPF*</label>
+                                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe um CPF válido.
+                                </div>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <label for="endereco" class="form-label">Endereço Completo*</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="Rua, número, complemento, bairro" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe seu endereço completo.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="telefone" class="form-label">Telefone*</label>
+                                <input type="tel" class="form-control" id="telefone" placeholder="(00) 00000-0000" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe um telefone válido.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">E-mail*</label>
+                                <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
+                                <div class="invalid-feedback">
+                                    Por favor, informe um e-mail válido.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label d-block">Sexo</label>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="sexoMasculino" value="masculino">
+                                    <label class="form-check-label" for="sexoMasculino">Masculino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="sexoFeminino" value="feminino">
+                                    <label class="form-check-label" for="sexoFeminino">Feminino</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="sexo" id="sexoOutro" value="outro">
+                                    <label class="form-check-label" for="sexoOutro">Outro</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="termos" required>
+                                    <label class="form-check-label" for="termos">
+                                        Concordo com os termos e condições
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Você deve concordar com os termos e condições.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg" id="btn-cadastrar">
+                                    <i class="fas fa-user-plus"></i> Cadastrar
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- Nova Seção: Agendamento -->
+        <section id="agendamento" class="mb-5">
+            <h2 class="text-center py-3 bg-light rounded shadow-sm">Agendamento de Serviço</h2>
+            <div class="card shadow">
+                <div class="card-body">
+                    <form id="form-agendamento" class="needs-validation" novalidate>
+                        <div class="row g-3">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label">Tipo de Serviço*</label>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoServico" id="retirada" value="retirada" required>
+                                    <label class="form-check-label" for="retirada">
+                                        <i class="fas fa-store"></i> Retirada no Local (Grátis)
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="tipoServico" id="entrega" value="entrega">
+                                    <label class="form-check-label" for="entrega">
+                                        <i class="fas fa-truck"></i> Tele-entrega (R$ 7,00)
+                                    </label>
+                                    <div class="invalid-feedback">
+                                        Por favor, selecione um tipo de serviço.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="data" class="form-label">Data*</label>
+                                <input type="date" class="form-control" id="data" required>
+                                <div class="invalid-feedback">
+                                    Por favor, selecione uma data válida.
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="horario" class="form-label">Horário*</label>
+                                <select class="form-select" id="horario" required>
+                                    <option value="" selected disabled>Selecione um horário</option>
+                                    <!-- Os horários serão preenchidos dinamicamente via JavaScript -->
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor, selecione um horário válido.
+                                </div>
+                            </div>
+                            <div id="info-entrega" class="col-md-6 mb-3 d-none">
+                                <label for="endereco-entrega" class="form-label">Endereço de Entrega*</label>
+                                <div class="form-check mb-2">
+                                    <input class="form-check-input" type="checkbox" id="mesmo-endereco">
+                                    <label class="form-check-label" for="mesmo-endereco">
+                                        Mesmo endereço do cadastro
+                                    </label>
+                                </div>
+                                <textarea class="form-control" id="endereco-entrega" rows="2"></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, informe o endereço de entrega.
+                                </div>
+                            </div>
+                            <div class="col-12 mt-3 text-center">
+                                <button type="submit" class="btn btn-primary btn-lg" id="btn-agendar">
+                                    <i class="fas fa-calendar-check"></i> Agendar Serviço
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- Calendário de Agendamentos -->
+                    <div class="mt-4">
+                        <h4 class="text-center mb-3">Calendário de Disponibilidade</h4>
+                        <div id="calendario-agendamento" class="table-responsive shadow-sm rounded">
+                            <!-- Calendário será gerado via JavaScript -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
-    <footer id="rodape">
-        <div class="rodape-container">
-            <div class="info-contato">
-                <h3>Contato</h3>
-                    <p><strong>Endereço:</strong> Rua Mercado Irado, 123 - Centro</p>
-                    <p><strong>Telefone:</strong> (12) 3456-7890</p>
-                    <p><strong>WhatsApp:</strong> (10) 98765-4321</p>
-                    <p><strong>E-mail:</strong> atendimento@minimercado1.com.br</p>
-                    <p><strong>Horário de Funcionamento:</strong> Segunda a Sábado, das 8h às 20h. Domingo, das 8h às 12h.</p>
+    <footer id="rodape" class="bg-dark text-white py-4 mt-5">
+        <div class="container rodape-container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <div class="info-contato">
+                        <h3>Contato</h3>
+                        <p><strong><i class="fas fa-map-marker-alt"></i> Endereço:</strong> Rua Mercado Irado, 123 - Centro</p>
+                        <p><strong><i class="fas fa-phone"></i> Telefone:</strong> (12) 3456-7890</p>
+                        <p><strong><i class="fab fa-whatsapp"></i> WhatsApp:</strong> (10) 98765-4321</p>
+                        <p><strong><i class="fas fa-envelope"></i> E-mail:</strong> atendimento@minimercado1.com.br</p>
+                        <p><strong><i class="fas fa-clock"></i> Horário de Funcionamento:</strong> Segunda a Sábado, das 8h às 20h. Domingo, das 8h às 12h.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="links-rodape">
+                        <h3>Links Rápidos</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#cabecalho" class="text-white"><i class="fas fa-home"></i> Início</a></li>
+                            <li><a href="#verde" class="text-white"><i class="fas fa-apple-alt"></i> Frutas e Verduras</a></li>
+                            <li><a href="#marrom" class="text-white"><i class="fas fa-shopping-basket"></i> Não Perecíveis</a></li>
+                            <li><a href="#branco" class="text-white"><i class="fas fa-pump-soap"></i> Higiene e Limpeza</a></li>
+                            <li><a href="#servicos" class="text-white"><i class="fas fa-concierge-bell"></i> Serviços</a></li>
+                            <li><a href="#cadastro" class="text-white"><i class="fas fa-user-plus"></i> Cadastro</a></li>
+                            <li><a href="#agendamento" class="text-white"><i class="fas fa-calendar-alt"></i> Agendamento</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <div class="politicas">
+                        <h3>Políticas</h3>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-white"><i class="fas fa-lock"></i> Política de Privacidade</a></li>
+                            <li><a href="#" class="text-white"><i class="fas fa-file-contract"></i> Termos de Uso</a></li>
+                            <li><a href="#" class="text-white"><i class="fas fa-exchange-alt"></i> Política de Trocas e Devoluções</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-2 mb-3">
+                    <div class="acessibilidade">
+                        <h3>Acessibilidade</h3>
+                        <button id="btn-aumentar-fonte" class="btn btn-outline-light mb-2" aria-label="Aumentar tamanho da fonte">
+                            <i class="fas fa-search-plus"></i> A+
+                        </button>
+                        <button id="btn-diminuir-fonte" class="btn btn-outline-light mb-2" aria-label="Diminuir tamanho da fonte">
+                            <i class="fas fa-search-minus"></i> A-
+                        </button>
+                        <button id="btn-contraste" class="btn btn-outline-light" aria-label="Alternar contraste alto">
+                            <i class="fas fa-adjust"></i> Contraste
+                        </button>
+                    </div>
+                </div>
             </div>
-            <div class="links-rodape">
-                <h3>Links Rápidos</h3>
-                <ul>
-                    <li><a href="#cabecalho">Início</a></li>
-                    <li><a href="#verde">Frutas e Verduras</a></li>
-                    <li><a href="#marrom">Não Perecíveis</a></li>
-                    <li><a href="#branco">Higiene e Limpeza</a></li>
-                    <li><a href="#servicos">Serviços</a></li>
-                </ul>
-            </div>
-            <div class="politicas">
-                <ul>
-                    <li><a href="#">Política de Privacidade</a></li>
-                    <li><a href="#">Termos de Uso</a></li>
-                    <li><a href="#">Política de Trocas e Devoluções</a></li>
-                </ul>
-            </div>
-            <div class="info-autor">
-                <p>Desenvolvido por: Erik K.</p>
-                <p>Última atualização: Fevereiro de 2025</p>
-            </div>
-            <div class="info-legal">
-                <p>&copy; 2025 MiniMercado - Todos os direitos reservados</p>
-                <p>CNPJ: 12.345.678/0001-90</p>
+            <hr>
+            <div class="row">
+                <div class="col-md-6 mb-3 info-autor">
+                    <p>Desenvolvido por: Erik K.</p>
+                    <p>Última atualização: Março de 2025</p>
+                </div>
+                <div class="col-md-6 mb-3 info-legal text-md-end">
+                    <p>&copy; 2025 MiniMerch - Todos os direitos reservados</p>
+                    <p>CNPJ: 12.345.678/0001-90</p>
+                </div>
             </div>
         </div>
     </footer>
+    <!-- Toasts para notificações -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="notificacaoToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto" id="toast-titulo">Notificação</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Fechar"></button>
+            </div>
+            <div class="toast-body" id="toast-mensagem">
+                Conteúdo da notificação
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Bundle com Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery para máscaras e outras funcionalidades -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <!-- Scripts personalizados -->
+    <script src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/accessibility.js"></script>
 </body>
 </html>
